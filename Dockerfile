@@ -1,8 +1,8 @@
-FROM bitriseio/docker-android:latest
+FROM quay.io/bitriseio/android:alpha-v2018_12_13-10_43-b1377
 
 LABEL version="1.0.0"
-LABEL repository="https://github.com/vayan/action-gradle"
-LABEL homepage="https://github.com/vayan/action-gradle"
+LABEL repository="https://github.com/vayan/action-android-gradle"
+LABEL homepage="https://github.com/vayan/action-android-gradle"
 LABEL maintainer="vayan <va@yan.pm>"
 
 LABEL com.github.actions.name="GitHub Action for building Android app with Gradle"
