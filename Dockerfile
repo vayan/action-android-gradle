@@ -1,13 +1,13 @@
 FROM openjdk:8
 
-LABEL version="0.1.0"
+LABEL version="0.2.0"
 LABEL repository="https://github.com/vayan/action-gradle"
 LABEL homepage="https://github.com/vayan/action-gradle"
 LABEL maintainer="vayan <va@yan.pm>"
 
-LABEL com.github.actions.name="GitHub Action for gradle"
-LABEL com.github.actions.description="Wraps the gradle CLI"
-LABEL com.github.actions.icon="package"
+LABEL com.github.actions.name="GitHub Action for building Android app with Gradle"
+LABEL com.github.actions.description="Wraps the gradle CLI with Android Tools pre-installed"
+LABEL com.github.actions.icon="play"
 LABEL com.github.actions.color="green"
 
 ENV ANDROID_HOME /opt/android-sdk-linux
@@ -68,10 +68,6 @@ RUN yes | sdkmanager \
     "add-ons;addon-google_apis-google-23" \
     "add-ons;addon-google_apis-google-22" \
     "add-ons;addon-google_apis-google-21"
-
-RUN apt-get update \
-  && apt-get -y install gradle \
-  && gradle -v
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 

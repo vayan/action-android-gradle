@@ -2,4 +2,5 @@
 
 set -e
 
-sh -c "gradle $*"
+chmod +x gradlew
+sh -c "./gradlew $*"
