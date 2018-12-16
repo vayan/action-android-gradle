@@ -1,6 +1,6 @@
 FROM bitriseio/docker-android:latest
 
-LABEL version="0.2.0"
+LABEL version="1.0.0"
 LABEL repository="https://github.com/vayan/action-gradle"
 LABEL homepage="https://github.com/vayan/action-gradle"
 LABEL maintainer="vayan <va@yan.pm>"
